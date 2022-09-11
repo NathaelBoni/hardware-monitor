@@ -11,10 +11,8 @@ void setup() {
     Wire.beginTransmission (i);
     if (Wire.endTransmission () == 0) {
       Serial.print ("Address: ");
-      Serial.print (i, DEC);
-      Serial.print (" (0x");
+      Serial.print ("0x");
       Serial.print (i, HEX);
-      Serial.println (")");
       count++;
       delay (1);
     }

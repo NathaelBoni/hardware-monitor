@@ -4,7 +4,9 @@
 //Display connection
 //SDA -> A4
 //SLC -> A5
-LiquidCrystal_I2C lcd(0x27, 20, 4);
+
+byte scannerCode = 0x27;
+LiquidCrystal_I2C lcd(scannerCode, 20, 4);
 unsigned long lastUpdate;
 bool isDisplayOn;
 
