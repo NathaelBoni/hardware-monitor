@@ -65,7 +65,7 @@ namespace MonitorService.Services
 
         public SensorValuesDto GetSensorValues()
         {
-            RetryPolicyHelper.RetryAction(0, 1, () => UpdateSensors());
+            RetryPolicyHelper.RetryAction(1, 1, () => UpdateSensors());
 
             return new SensorValuesDto
             {

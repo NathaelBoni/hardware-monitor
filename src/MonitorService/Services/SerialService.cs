@@ -44,7 +44,7 @@ namespace MonitorService.Services
         }
 
         private void Open()
-            => RetryPolicyHelper.RetryAction(0, 3, () => serialPort.Open());
+            => RetryPolicyHelper.RetryAction(3, 3, () => serialPort.Open());
     }
 
     public class SerialConfig

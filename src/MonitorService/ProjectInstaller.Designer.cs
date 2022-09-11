@@ -31,17 +31,18 @@
             this.serviceProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
             this.serviceInstaller = new System.ServiceProcess.ServiceInstaller();
             // 
-            // serviceProcessInstaller1
+            // serviceProcessInstaller
             // 
             this.serviceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
             this.serviceProcessInstaller.Password = null;
             this.serviceProcessInstaller.Username = null;
             // 
-            // serviceInstaller1
+            // serviceInstaller
             // 
-            this.serviceInstaller.DisplayName = "Hardware Monitor";
             this.serviceInstaller.Description = "Monitor system sensors and send to serial port";
+            this.serviceInstaller.DisplayName = "Hardware Monitor";
             this.serviceInstaller.ServiceName = "Hardware Monitor";
+            this.serviceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
             // 
