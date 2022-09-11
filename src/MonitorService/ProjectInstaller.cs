@@ -10,10 +10,5 @@ namespace MonitorService
         {
             InitializeComponent();
         }
-
-        private void serviceProcessInstaller_AfterInstall(object sender, InstallEventArgs e)
-        {
-
-        }
     }
 }
