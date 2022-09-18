@@ -12,6 +12,7 @@ namespace MonitorService.Models
         public int GPUHotSpotTemp { get; set; }
         public int GPUFanSpeed { get; set; }
         public float MemoryUsage { get; set; }
+        public int FPS { get; set; }
 
         public override string ToString()
         {

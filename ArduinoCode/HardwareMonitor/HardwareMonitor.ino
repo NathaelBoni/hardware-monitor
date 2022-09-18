@@ -74,6 +74,7 @@ void writeToLCD(JSONVar sensorObject){
   String gpuHotSpotTemp = getValue(sensorObject, "GPUHotSpotTemp");
   String gpuFanSpeed = getValue(sensorObject, "GPUFanSpeed");
   String memoryUsage = getValue(sensorObject, "MemoryUsage");
+  String fps = getValue(sensorObject, "FPS");
   
   lcd.clear();
   lcd.setCursor(0, 0);
@@ -92,7 +93,10 @@ void writeToLCD(JSONVar sensorObject){
   lcd.print(" " + gpuHotSpotTemp);
   lcd.write(0);
   lcd.setCursor(0, 3);
-  lcd.print("RAM " + memoryUsage + " Gb");
+  lcd.print("RAM " + memoryUsage + " Gb ");
+  if (fps != "-1"){
+    lcd.print("FPS " + fps);
+  }
 }
 
 void displayTurnOff(){

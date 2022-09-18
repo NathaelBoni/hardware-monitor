@@ -24,6 +24,7 @@ namespace MonitorService.Services
         private readonly ISensor gpuHotSpotTemp;
         private readonly ISensor gpuFanSpeed;
         private readonly ISensor memoryUsage;
+        private readonly ISensor fps;
 
         public SystemService(string gpuManufacturer, string motherBoardCPUFanConfigName)
         {
@@ -61,6 +62,7 @@ namespace MonitorService.Services
             gpuHotSpotTemp = GetGPUSensor(SensorStrings.GPU_HOTSPOT_TEMP, SensorType.Temperature);
             gpuFanSpeed = GetGPUSensor(SensorStrings.GPU_FAN_SPEED, SensorType.Fan);
             memoryUsage = GetMemorySensor(SensorStrings.MEMORY_USAGE, SensorType.Data);
+            fps = GetGPUSensor(SensorStrings.FPS_COUNTER, SensorType.Factor);
         }
 
         public SensorValuesDto GetSensorValues()
@@ -76,7 +78,8 @@ namespace MonitorService.Services
                 GPUTemp = SensorValueHelper.GetRoundSensorValue(gpuCoreTemp),
                 GPUHotSpotTemp = SensorValueHelper.GetRoundSensorValue(gpuHotSpotTemp),
                 GPUFanSpeed = SensorValueHelper.GetRoundSensorValue(gpuFanSpeed),
-                MemoryUsage = SensorValueHelper.GetSensorValue(memoryUsage)
+                MemoryUsage = SensorValueHelper.GetSensorValue(memoryUsage),
+                FPS = SensorValueHelper.GetRoundSensorValue(fps)
             };
         }
 
