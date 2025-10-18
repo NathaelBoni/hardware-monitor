@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MonitorService")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Monitor health and performance of your hardware components")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Nathael")]
 [assembly: AssemblyProduct("MonitorService")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3d6a7a3d-02b0-4132-a5ce-04a3fc95b3d1")]
+[assembly: Guid("3d6a7a3d-02b0-4132-a5ce-04a3fc95b3d2")]
 
 // Version information for an assembly consists of the following four values:
 //
